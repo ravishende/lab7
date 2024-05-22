@@ -90,8 +90,7 @@ function initFormHandler() {
 		// B7. Add the recipeObject data to <recipe-card> using element.data
 		recipeCard.data = recipeObject;
 		// B8. Append this new <recipe-card> to <main>
-		let main = document.querySelector('main');
-		main.appendChild(recipeCard);
+		document.querySelector('main').appendChild(recipeCard);
 		// B9. Get the recipes array from localStorage, add this new recipe to it, and
 		//            then save the recipes array back to localStorage
 		let recipes = getRecipesFromStorage();
@@ -106,6 +105,6 @@ function initFormHandler() {
 		// B12. Clear the local storage
 		localStorage.clear();
 		// B13. Delete the contents of <main>
-		main.innerHTML = '';
+		document.querySelector('main').innerHTML = '';
 	});
 }
